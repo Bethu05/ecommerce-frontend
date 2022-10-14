@@ -15,39 +15,35 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 // custom Styles
 const useStyles = makeStyles((theme) => ({
+  appbar: {
+    backgroundColor: "#5f5f5f9c",
+  },
   title: {
     padding: theme.spacing(0.5, 1),
-    // color: "#ff8800",
     color: "#009620",
-    // marginLeft: theme.spacing(5),
-    // border: "1px solid yellow",
   },
   links: {
     listStyle: "none",
-    // marginLeft: theme.spacing(2),
-    // border: "1px solid crimson",
-
     "& li": {
       float: "left",
-      // padding: theme.spacing(1),
-      // backgroundColor: "#f9f9",
-      padding: theme.spacing(0.5, 1.5),
-      // marginRight: theme.spacing(1),
+      padding: theme.spacing(0.5, 1),
       textDecoration: "none",
-      // "& h6": {
-      //   fontSize: "0.7rem",
-      // },
+      "& a": {
+        fontSize: "16px",
+        textDecoration: "none",
+      },
+      "& a:hover": {
+        textDecoration: "none",
+      },
     },
   },
   grow: {
     flexGrow: 1,
   },
   search: {
-    border: "1px solid crimson",
+    border: "1px solid #009620",
     position: "relative",
-    // borderRadius: theme.spacing(1),
     borderRadius: 22,
-    // backgroundColor: fade(theme.palette.common.white, 0.4),
     "&:hover": {
       backgroundColor: fade(theme.palette.common.white, 0.2),
     },
@@ -59,8 +55,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   searchIcon: {
-    // background: "blue",
-    color: "#ffffff",
+    color: "#009620",
     position: "absolute",
     padding: theme.spacing(0, 1),
     height: "100%",
@@ -71,31 +66,23 @@ const useStyles = makeStyles((theme) => ({
   },
   inputInput: {
     padding: theme.spacing(1, 2),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(2.5)}px)`,
     transition: theme.transitions.create("width"),
     width: "100%",
-    // color: "#ff8800",
-    color: "#009620",
     [theme.breakpoints.up("sm")]: {
-      width: "12ch",
+      width: "150px",
       "&:focus": {
-        width: "18ch",
+        width: "180px",
       },
     },
   },
   account: {
-    // border: "1px solid blue",
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
-    // padding: theme.spacing(0, 2),
-    marginLeft: theme.spacing(2),
     marginRight: theme.spacing(5),
   },
   accountIcons: {
-    // backgroundColor: "yellow",
-    color: "#009620cb",
     marginLeft: theme.spacing(2),
   },
 }));
@@ -104,7 +91,12 @@ function LaptopNavbar() {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" color="primary" elevation={0}>
+    <AppBar
+      className={classes.appbar}
+      position="fixed"
+      color="primary"
+      elevation={1}
+    >
       <Toolbar>
         <Typography className={classes.title} variant="h5">
           Flavoro

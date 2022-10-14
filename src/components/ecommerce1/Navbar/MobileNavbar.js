@@ -7,26 +7,14 @@ import SearchIcon from "@material-ui/icons/Search";
 const useStyles = makeStyles((theme) => ({
   title: {
     padding: theme.spacing(0.5, 1),
-    // color: "#ff8800",
     color: "#009620",
-    // marginLeft: theme.spacing(5),
-    // border: "1px solid yellow",
   },
   links: {
     listStyle: "none",
-    // marginLeft: theme.spacing(2),
-    // border: "1px solid crimson",
-
     "& li": {
       float: "left",
-      // padding: theme.spacing(1),
-      // backgroundColor: "#f9f9",
       padding: theme.spacing(0.5, 1.5),
-      // marginRight: theme.spacing(1),
       textDecoration: "none",
-      "& h6": {
-        // fontSize: "0.6rem",
-      },
     },
   },
   grow: {
@@ -35,9 +23,7 @@ const useStyles = makeStyles((theme) => ({
   search: {
     border: "1px solid crimson",
     position: "relative",
-    // borderRadius: theme.spacing(1),
     borderRadius: 22,
-    // backgroundColor: fade(theme.palette.common.white, 0.4),
     "&:hover": {
       backgroundColor: fade(theme.palette.common.white, 0.2),
     },
